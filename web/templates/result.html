@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prediction Result</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="mt-5">Prediction Result</h1>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='upload/' + filename) }}" alt="Predicted Image" class="img-fluid">
+            </div>
+            <a href="{{ url_for('download_file', filename=filename) }}" class="btn btn-success mt-3">Download Image</a>
+            <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Upload Another Image</a>
+        </div>
+    </body>
+</html>
